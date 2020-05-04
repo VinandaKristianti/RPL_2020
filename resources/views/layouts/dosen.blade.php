@@ -57,30 +57,13 @@
               </a>
             </li> --}}
             <li class="nav-item">
-              <a class="nav-link" href="/Mahasiswa">
-                <i class="ni ni-single-02 text-yellow"></i>
+              <a class="nav-link" href="/ProfilDosen">
+                <i class="ni ni-hat-3 text-yellow"></i>
                 <span class="nav-link-text">Profil</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Skp">
-                <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Pengajuan Surat Keterangan</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Pkp">
-                <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Pengajuan Pra KP</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Kp">
-                <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Pengajuan KP</span>
-              </a>
-            </li>
           </ul>
+          
           <!-- Divider -->
           <hr class="my-3">
           <!-- Heading -->
@@ -90,12 +73,22 @@
           <!-- Navigation -->
           <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
-              {{-- <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank"> --}}
-                <a class="nav-link" href="/LihatJadwal">
+                <a class="nav-link" href="/Bimbingan">
                 <i class="ni ni-spaceship"></i>
-                <span class="nav-link-text">Lihat Jadwal Ujian</span>
+                <span class="nav-link-text"> Mahasiswa Bimbingan</span>
                 </a>
-              {{-- </a> --}}
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Pengujian">
+                <i class="ni ni-spaceship"></i>
+                <span class="nav-link-text">Daftar Pengujian</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Pengajuan">
+                <i class="ni ni-spaceship"></i>
+                <span class="nav-link-text">Daftar Pengajuan Ujian</span>
+                </a>
             </li>
         </div>
       </div>

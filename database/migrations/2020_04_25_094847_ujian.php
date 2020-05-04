@@ -14,9 +14,11 @@ class Ujian extends Migration
     public function up()
     {
         Schema::create('ujian', function ($table) {
-            $table->bigIncrements('id_jadwal');
-            $table->date('tgl');
+            $table->increments('id_jadwal');
             $table->integer('nik');
+            $table->date('tgl');
+            $table->time('jam');
+            $table->string('ruang');
             $table->timestamps();
         });
     }

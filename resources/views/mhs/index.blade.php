@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('judul','Data Mahasiswa')
+@section('judul','DATA MAHASISWA')
 
 @section('content')
 
@@ -14,25 +14,19 @@
         {{csrf_field()}}
      <div class="form-group">
         <div class="form-group">
-            <label for="exampleInputEmail1">NIM     :</label>
-          <input name="nim"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="NIM" >
+            <label for="exampleInputEmail1">NIM</label>
+          <input name="nim"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" >
           </div>
           <div class="form-group">
-              <label for="exampleInputEmail1">Nama Lengkap :</label>
-              <input name="nama"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Lengkap" >
+              <label for="exampleInputEmail1">Nama Lengkap</label>
+              <input name="nama"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" >
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Email :</label>
+              <label for="exampleInputEmail1">Email</label>
               <input name="email"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email @si.ukdw.ac.id" >
             </div>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Semester :</label>
-              <select name="semester" id="exampleFormControlSelect1">
-                <option value="genap">Genap</option>
-                <option value="ganjil">Ganjil</option>
-              </select>
-                </div>
-     <button type="submit" class="btn btn-primary">Submit</button>
+            
+     <button type="submit" class="btn btn-primary">Update</button>
     </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

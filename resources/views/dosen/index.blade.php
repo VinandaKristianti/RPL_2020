@@ -1,9 +1,9 @@
 @extends('layouts.admin')
-@section('judul','Set Ujian KP')
+@section('judul','DATA DOSEN')
 
 @section('content')
 
-<div class="container">
+<div class="container" >
   @if(session('sukses'))
       <div class="alert alert-success" role="alert">
        {{session('sukses')}}
@@ -14,23 +14,19 @@
         {{csrf_field()}}
      <div class="form-group">
         <div class="form-group">
-            <label for="exampleInputEmail1">ID Jadwal</label>
+            <label for="exampleInputEmail1">NIK</label>
           <input name="nim"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" >
           </div>
           <div class="form-group">
-              <label for="exampleInputEmail1">Tanggal</label>
+              <label for="exampleInputEmail1">Nama Lengkap</label>
               <input name="nama"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" >
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Dosen Penguji</label>
-              <input name="email"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" >
-            </div>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Ruangan</label>
-              <input name="email"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" >
+              <label for="exampleInputEmail1">Email</label>
+              <input name="email"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email @si.ukdw.ac.id" >
             </div>
             
-     <button type="submit" class="btn btn-primary">Submit</button>
+     <button type="submit" class="btn btn-primary">Update</button>
     </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
