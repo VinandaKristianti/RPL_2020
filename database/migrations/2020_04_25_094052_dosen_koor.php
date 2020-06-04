@@ -13,12 +13,14 @@ class DosenKoor extends Migration
      */
     public function up()
     {
-        Schema::create('dosen', function (Blueprint $table) {
+        Schema::create('dosen_koor', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('nik');
+            $table->integer('nik')->nullable();
             $table->string('nama_dos');
             $table->string('email');
+            $table->string('google_id')->nullable();
             $table->timestamps();
+            
         });
     }
 

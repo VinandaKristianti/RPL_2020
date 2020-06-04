@@ -16,15 +16,18 @@ class Suratkp extends Migration
         
         Schema::create('suratkp', function (Blueprint $table) {
             $table->increments('id_skp');
-            $table->integer('nim');
+            $table->char('nim',8);
             $table->string('lembaga');
-            $table->integer('status_skp');
-            $table->string('no_telp');
-            $table->string('pimpinan');
-            $table->string('dokumen');
             $table->string('alamat');
+            $table->string('pimpinan');
+            $table->string('no_telp');
             $table->string('fax');
+            $table->string('spek');
+            $table->string('tools');
+            $table->string('dokumen');
+            $table->integer('status_skp');
             $table->timestamps();
+
         });
         
     }

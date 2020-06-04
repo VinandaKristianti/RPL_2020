@@ -16,4 +16,9 @@ class kpControl extends Controller
     public function index_ujian(){
         return view('lihat.index');
     }
+
+    public function tambah(Request $request){
+        \App\kp ::create($request->all());
+        return redirect('Skp')->with('sukses','Silakan melakukan pengecekan status pengajuan Anda secara mandiri !');
+    }
 }

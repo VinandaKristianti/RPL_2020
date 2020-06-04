@@ -12,4 +12,10 @@ class mhsControl extends Controller
         return view('mhs.index',compact('data_mhs'));
         //(folder.file)//(menampilkan atribut di view foreach nya)
     }
+
+    public function create_mhs(request $request){
+        \App\mhs::create($request->all());
+        return redirect('index')->with('Sukses','Data Berhasil Ditambahkan');
+    }
+    
 }

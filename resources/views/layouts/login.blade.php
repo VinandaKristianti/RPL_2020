@@ -34,7 +34,7 @@
 		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
 			<form class="login100-form validate-form">
 				<span class="login100-form-title p-b-37">
-					LOGIN 
+					LOGIN KP SI
 				</span>
 
 				<div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
@@ -60,7 +60,7 @@
 				</div>
 
 				<div class="flex-c p-b-112">
-					<a href="#" class="login100-social-item">
+					<a href="{{url('login/google')}}" class="login100-social-item">
 						<img src="{{asset('Login/images/icons/icon-google.png')}}" alt="GOOGLE">
 					</a>
 				</div>

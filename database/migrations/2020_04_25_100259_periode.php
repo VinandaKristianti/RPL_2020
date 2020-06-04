@@ -14,11 +14,12 @@ class Periode extends Migration
     public function up()
     {
         Schema::create('periode', function (Blueprint $table) {
-            $table->bigIncrements('id_periode');
+            $table->increments('id_periode');
             $table->string('tahun');
             $table->integer('aktif');
             $table->string('semester');
             $table->timestamps();
+
         });
     }
 

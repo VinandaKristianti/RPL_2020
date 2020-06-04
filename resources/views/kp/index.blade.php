@@ -2,55 +2,82 @@
 @section('judul','PENGAJUAN KP')
 
 @section('content')
-
+<div class="col-md-6">
 <div class="container" >
   @if(session('sukses'))
-      <div class="alert alert-success" role="alert">
+    <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">DONE !</h4>
+    <hr>
+    <p class="mb-0">Data berhasil ditambahkan !</p>     
        {{session('sukses')}}
       </div>
   @endif
     <div class="row">
-    <form >
+    <form action="/Kp/Tambah" method="POST">
         {{csrf_field()}}
      <div class="form-group">
         <div class="form-group">
             <label for="exampleInputEmail1">Lembaga</label>
-          <input name="nim"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="NIM" >
+          <input name="lembaga"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" >
           </div>
           <div class="form-group">
-              <label for="exampleInputEmail1">Alamat</label>
-              <input name="nama"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Lengkap" >
-            </div>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Pimpinan</label>
-              <input name="email"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email @si.ukdw.ac.id" >
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">No Telepon</label>
-                <input name="email"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email @si.ukdw.ac.id" >
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Spesifikasi</label>
-                <input name="email"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email @si.ukdw.ac.id" >
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Tools</label>
-                <input name="email"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email @si.ukdw.ac.id" >
-              </div>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Status Pra KP</label>
-              <input name="email"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email @si.ukdw.ac.id" >
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Dokumen </label>
-                <input name="email"type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email @si.ukdw.ac.id" >
-              </div>
+            <label for="exampleInputEmail1">Alamat</label>
+            <input name="alamat"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" >
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Pimpinan</label>
+            <input name="pimpinan"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" >
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">No Telepon</label>
+            <input name="no_telp"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" >
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Fax</label>
+            <input name="fax"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" >
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Spesifikasi</label>
+            <input name="spek"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" >
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Tools</label>
+            <input name="tools"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" >
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Dokumen</label>
+            <input name="dokumen"type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" >
+          </div>        
     </div>
   <button type="submit" class="btn btn-primary">Submit</button>
   </form>
  </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+ <div> <br> </div>
+  <div class="card">
+      <div class="card-header"> <strong> Status Pengajuan KP </strong> </div>
+          <div class="card-body">
+          @if(session('sukses'))
+              <div class="alert alert-success" role="alert">
+              {{session('sukses')}}
+              </div>
+          @endif
+            <div class="row">     
+              <table class="table">
+                <tr>
+                    <th>Judul</th>
+                    <th>Pembimbing</th>
+                    <th>Tanggal</th>
+                    <th>Disetujui</th>
+                </tr>
+                
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        
+                      </tr>
+                    
+            
+</div>
 @endsection

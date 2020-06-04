@@ -13,4 +13,9 @@ class pkpControl extends Controller
         return view('prakp.index',compact('data_pkp'));
         //(folder.file)//(menampilkan atribut di view foreach nya)
     }
+
+    public function tambah(Request $request){
+        \App\pkp ::create($request->all());
+        return redirect('Skp')->with('sukses','Silakan melakukan pengecekan status pengajuan Anda secara mandiri !');
+    }
 }

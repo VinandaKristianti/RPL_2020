@@ -12,4 +12,9 @@ class skpControl extends Controller
         return view('skp.index',compact('data_skp'));
         //(folder.file)//(menampilkan atribut di view foreach nya)
     }
+    
+    public function tambah(Request $request){
+        \App\skp ::create($request->all());
+        return redirect('Skp')->with('sukses','Silakan melakukan pengecekan status pengajuan Anda secara mandiri !');
+    }
 }

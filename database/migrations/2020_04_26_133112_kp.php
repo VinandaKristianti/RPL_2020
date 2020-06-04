@@ -14,18 +14,23 @@ class Kp extends Migration
     public function up()
     {
         Schema::create('kp', function (Blueprint $table) {
-            $table->bigIncrements('id_kp');
-            $table->integer('nim');
+            $table->increments('id_kp');
+            $table->char('nim',8);
             $table->integer('id_jadwal');
-            $table->string('spesifikasi');
-            $table->string('no_telp');
-            $table->string('pimpinan');
-            $table->mediumText('dokumen');
             $table->string('lembaga');
+            $table->string('alamat');
+            $table->string('pimpinan');
+            $table->string('no_telp');
+            $table->string('fax');
+            $table->string('spek');
+            $table->string('tools');
+            $table->text('dokumen');
             $table->string('status_kp');
             $table->string('status_ujian');
-            $table->integer('nik');
+            $table->integer('dosen_id');
             $table->timestamps();
+
+            
         });
     }
 

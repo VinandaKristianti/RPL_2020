@@ -90,6 +90,15 @@
                 <span class="nav-link-text">Daftar Pengajuan Ujian</span>
                 </a>
             </li>
+            <hr class="my-3">
+            <li class="nav-item">
+              {{-- <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank"> --}}
+                <a class="nav-link" href="/LihatJadwal">
+                <i class="ni ni-spaceship"></i>
+                <span class="nav-link-text">LOG OUT</span>
+                </a>
+              {{-- </a> --}}
+            </li>
         </div>
       </div>
     </div>

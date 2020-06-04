@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.dosen')
 @section('judul','DATA DOSEN')
 
 @section('content')
@@ -23,7 +23,7 @@
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Email</label>
-              <input name="email"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email @si.ukdw.ac.id" >
+              <input name="email"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email @staff.ukdw.ac.id" >
             </div>
             
      <button type="submit" class="btn btn-primary">Update</button>

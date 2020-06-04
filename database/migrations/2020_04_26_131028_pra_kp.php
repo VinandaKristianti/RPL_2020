@@ -14,19 +14,21 @@ class PraKp extends Migration
     public function up()
     {
         Schema::create('pra_kp', function (Blueprint $table) {
-            $table->bigIncrements('id_pkp');
-            $table->integer('mhs_id');
+            $table->increments('id_pkp');
+            $table->char('nim',8);
             $table->integer('dosen_id');
-            $table->string('ruang');
-            $table->string('spek');
-            $table->string('tools');
-            $table->string('no_telp');
-            $table->string('pimpinan');
-            $table->mediumText('dokumen');
             $table->string('lembaga');
             $table->string('alamat');
+            $table->string('pimpinan');
+            $table->string('no_telp');
+            $table->string('fax');
+            $table->string('spek');
+            $table->string('tools');
+            $table->text('dokumen');
             $table->string('status_pkp');
             $table->timestamps();
+
+            
         });
     }
 

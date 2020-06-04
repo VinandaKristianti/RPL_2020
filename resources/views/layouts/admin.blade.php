@@ -97,6 +97,18 @@
                 </a>
               {{-- </a> --}}
             </li>
+            <hr class="my-3">
+            <li class="nav-item">
+              {{-- <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank"> --}}
+                <a class="nav-link" href="/Bye"
+                  onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="ni ni-spaceship"></i>LOG OUT
+                </a>
+
+                <form id="logout-form" action="{{route('BYE')}}" method="POST">
+                @csrf
+                </form>
+              {{-- </a> --}}
+            </li>
         </div>
       </div>
     </div>

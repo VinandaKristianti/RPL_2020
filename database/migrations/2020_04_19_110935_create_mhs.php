@@ -14,13 +14,15 @@ class CreateMhs extends Migration
     public function up()
     {
         Schema::create('mhs', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('nim');
+            $table->id();
+            $table->char('nim',8)->nullable();
             $table->string('nama');
-            $table->bigInteger('email');
+            $table->string('email');
             $table->string('semester');
-            $table->bigInteger('id_periode');
+            $table->string('google_id')->nullable();
+            $table->integer('id_periode')->nullable();
             $table->timestamps();
+
         });
     }
 

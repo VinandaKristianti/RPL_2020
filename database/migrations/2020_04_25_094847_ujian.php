@@ -15,11 +15,14 @@ class Ujian extends Migration
     {
         Schema::create('ujian', function ($table) {
             $table->increments('id_jadwal');
-            $table->integer('nik');
             $table->date('tgl');
             $table->time('jam');
             $table->string('ruang');
             $table->timestamps();
+            $table->integer('dosen_id');
+            $table->char('nim',8);
+            
+            
         });
     }
 
